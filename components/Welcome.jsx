@@ -1,7 +1,19 @@
-import { Text } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 
 export function Welcome(props) {
   return (
-    <Text>にゃおーん, {props.name}</Text>
+    <Text style={styles.text}>
+      Hello, {props.name}!!
+    </Text>
   );
 };
+
+const styles = StyleSheet.create({
+  text: {
+    fontFamily: Platform.select({
+      ios: "Hiragino Mincho ProN",
+      android: "serif",
+    }),
+    fontSize: 48
+  },
+});
