@@ -1,15 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 
-import { Welcome } from './components/Welcome';
-import { Counter } from './components/Counter';
+// import { Welcome } from './components/Welcome';
+// import { Counter } from './components/Counter';
+// import { Alert } from './components/Alert';
+import { Clock } from './components/Clock';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Welcome name="ねこねこ" />
-      <Counter />
+      <Clock />
     </View>
   );
 }
