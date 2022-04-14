@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
-import { Text, View, Button, StyleSheet } from 'react-native';
+import { Text, View, Button } from 'react-native';
 
 export function Counter() {
   const [count, setCount] = useState(0);
 
+  const onPressMinusOne = () => {
+    setCount(count - 1);
+  };
+
+  const onPressPlusOne = () => {
+    setCount(count + 1);
+  };
+
   return (
-    <View style={styles.container}>
-      <Button title="-1" onPress={() => setCount(count - 1)} />
+    <View>
+      <Button title="-1" onPress={onPressMinusOne} />
       <Text>{count}</Text>
-      <Button title="+1" onPress={() => setCount(count + 1)} />
+      <Button title="+1" onPress={onPressPlusOne} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
